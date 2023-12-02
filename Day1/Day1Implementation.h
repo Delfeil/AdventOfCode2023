@@ -5,7 +5,7 @@ using namespace AdventOfCode23;
 class Day1Implementation
 {
 public:
-	void Tmp();
+	void Resolve(char* fileName, int stepNumber);
 };
 
 int main(int argc, char* argv[]);

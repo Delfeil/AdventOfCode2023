@@ -1,5 +1,7 @@
 ﻿  pch.cpp
   Day1.cpp
+C:\Users\Delfeil\Documents\Project\AdventOfCode\AdventOfCode2023\Days\Day1.cpp(58,16): warning C4267: 'initialisation' : conversion de 'size_t' en 'int', perte possible de données
+C:\Users\Delfeil\Documents\Project\AdventOfCode\AdventOfCode2023\Days\Day1.cpp(64,16): warning C4267: 'initialisation' : conversion de 'size_t' en 'int', perte possible de données
   Days.cpp
-  Generating Code...
-  Days.vcxproj -> C:\Users\user\Documents\Projets\AdventOfCode\AdventOfCode2023\x64\Debug\Days.lib
+  Génération de code en cours...
+  Days.vcxproj -> C:\Users\Delfeil\Documents\Project\AdventOfCode\AdventOfCode2023\x64\Debug\Days.lib

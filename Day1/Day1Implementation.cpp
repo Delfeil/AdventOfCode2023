@@ -2,19 +2,28 @@
 #include <iostream>
 #include <string>
 
-void Day1Implementation::Resolve(char* fileName, int stepNumber)
+void DayImplementation::Resolve(char* fileName, int dayNumber, int stepNumber)
 {
-	Day1 d1(stepNumber);
-	d1.Resolve(fileName);
+	if (dayNumber == 1)
+	{
+		Day1 d1(stepNumber);
+		d1.Resolve(fileName);
+	}
+	else if (dayNumber == 2)
+	{
+		Day2 d2(fileName, stepNumber);
+		d2.Resolve();
+	}
 }
 
 int main(int argc, char* argv[])
 {
-	if (argc != 3)
+	if (argc != 4)
 		return 1;
 	
-	Day1Implementation d1;
-	std::string step(argv[2]);
-	d1.Resolve(argv[1], std::stoi(step));
+	std::string dayNumber(argv[2]);
+	std::string step(argv[3]);
+	DayImplementation dayImplementation;
+	dayImplementation.Resolve(argv[1], std::stoi(dayNumber), std::stoi(step));
 	return 0;
 }

@@ -17,6 +17,8 @@
   <ItemGroup>
     <Text Include="input.txt" />
     <Text Include="test.txt" />
+    <Text Include="inputD2.txt" />
+    <Text Include="d2exemple.txt" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Day1Implementation.h">

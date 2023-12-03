@@ -9,7 +9,9 @@
 
 // add headers that you want to pre-compile here
 #include "framework.h"
+#include "Day.h"
 #include "Day1.h"
 #include "Day2.h"
+#include "Day3.h"
 
 #endif //PCH_H

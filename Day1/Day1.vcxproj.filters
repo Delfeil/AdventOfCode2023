@@ -19,6 +19,8 @@
     <Text Include="test.txt" />
     <Text Include="inputD2.txt" />
     <Text Include="d2exemple.txt" />
+    <Text Include="d3Test.txt" />
+    <Text Include="d3input.txt" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Day1Implementation.h">

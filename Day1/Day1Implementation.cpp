@@ -13,6 +13,10 @@ void DayImplementation::Resolve(char* fileName, int dayNumber, int stepNumber)
 	{
 		Day2 d2(fileName, stepNumber);
 		d2.Resolve();
+	} 
+	else if (dayNumber == 3) {
+		Day3 d3(fileName, stepNumber);
+		d3.Resolve();
 	}
 }
 

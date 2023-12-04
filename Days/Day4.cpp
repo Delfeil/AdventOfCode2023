@@ -83,18 +83,22 @@ void AdventOfCode23::Day4::Resolve()
 		std::cout << "Total Score = " << sumPoints << std::endl;
 	}
 
-	for (int cardId = 0; cardId < _cards.size(); cardId++)
-	{
-		Card* card = _cards[cardId].second;
-		for (int i = 2; i < _cards[cardId].first; i++)
-		{
-			for (int j = 0; j < card->nbMatchingNumbers; j++)
-			{
-				int cardIdToDuplicate = card->cardsCopied[j];
-				_cards[j].first += 1;
-			}
 
+	int totalNbCards = 0;
+	while (!_cardsStack.empty()) {
+		totalNbCards += 1;
+		Card* card = _cardsStack.top();
+		_cardsStack.pop();
+		//std::cout << "Card " << card->cardId << " Copy cards: ";
+		for (int j = 0; j < card->nbMatchingNumbers; j++)
+		{
+			int cardIdToDuplicate = card->cardsCopied[j];
+			_cardsStack.push(_cards[cardIdToDuplicate].second);
+			//std::cout << cardIdToDuplicate << ", ";
 		}
+		//std::cout << std::endl;
+
 	}
+	std::cout << "Total Cards: " << totalNbCards << std::endl;
 }
 

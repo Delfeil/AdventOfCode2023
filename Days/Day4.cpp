@@ -1,0 +1,78 @@
+#include "pch.h"
+#include "Day4.h"
+
+void AdventOfCode23::Day4::Resolve()
+{
+	std::string patternNumber("[0-9]+");
+	std::regex rPatternNumber(patternNumber);
+	std::smatch matchNumber;
+	std::string line;
+
+	int sumPoints = 0;
+	int lineId = 0;
+	while (std::getline(_stream, line))
+	{
+		std::cout << line << std::endl;
+		Card* currentCard = new Card();
+		currentCard->cardId = lineId;
+		std::istringstream iss(line);
+		std::string number;
+		std::list<int>* validNumbers = new std::list<int>();
+
+		while (iss >> number)
+		{
+			std::cout << "is number a number?: " << number << std::endl;
+			if (!number.compare("|"))
+				break;
+			if (number.back() == ':')
+				continue;
+			if (std::regex_search(number, matchNumber, rPatternNumber))
+			{
+				std::cout << "Add valid Number: " << matchNumber.str() << std::endl;
+				validNumbers->push_back(std::stoi(matchNumber.str()));
+			}
+		}
+		currentCard->validNumbers = validNumbers;
+
+		std::list<int>* cardNumbers = new std::list<int>();
+		while (iss >> number)
+		{
+			if (number.empty())
+				break;
+			std::cout << "Add my Number: " << number << std::endl;
+			cardNumbers->push_back(std::stoi(number));
+		}
+		currentCard->cardNumbers = cardNumbers;
+		
+		_cards[lineId] = currentCard;
+		lineId++;
+	}
+
+	for (int i = 0; i < _cards.size(); i++)
+	{
+		int cardScore = 0;
+		Card* card = _cards[i];
+		for (std::list<int>::iterator itMyCard = card->cardNumbers->begin(); itMyCard != card->cardNumbers->end(); itMyCard++)
+		{
+			std::list<int>::iterator findIter = std::find(card->validNumbers->begin(), card->validNumbers->end(), *itMyCard);
+			if (findIter != card->validNumbers->end())
+			{
+				card->nbMatchinNumbers++;
+				if (cardScore == 0)
+				{
+					cardScore = 1;
+				}
+				else
+				{
+					cardScore *= 2;
+				}
+				std::cout << "Card " << i << " number match : " << *itMyCard << " Card Score = " << cardScore << std::endl;
+			}
+		}
+		card->score = cardScore;
+		sumPoints += cardScore;
+		std::cout << "Total Score = " << sumPoints << std::endl;
+	}
+
+}
+

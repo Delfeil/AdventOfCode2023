@@ -18,6 +18,10 @@ void DayImplementation::Resolve(char* fileName, int dayNumber, int stepNumber)
 		Day3 d3(fileName, stepNumber);
 		d3.Resolve();
 	}
+	else if (dayNumber == 4) {
+		Day4 d4(fileName, stepNumber);
+		d4.Resolve();
+	}
 }
 
 int main(int argc, char* argv[])

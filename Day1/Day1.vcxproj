@@ -133,6 +133,8 @@
     <Text Include="d2exemple.txt" />
     <Text Include="d3input.txt" />
     <Text Include="d3Test.txt" />
+    <Text Include="d4input.txt" />
+    <Text Include="d4test.txt" />
     <Text Include="input.txt" />
     <Text Include="inputD2.txt" />
     <Text Include="test.txt" />

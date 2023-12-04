@@ -5,6 +5,7 @@
 #include <sstream>
 #include <list>
 #include <regex>
+#include <stack>
 
 namespace AdventOfCode23
 {
@@ -14,11 +15,11 @@ namespace AdventOfCode23
 		struct Card {
 		public:
 			int cardId = 0;
-			bool copy = false;
 			std::list<int>* validNumbers;
 			std::list<int>* cardNumbers;
-			int nbMatchinNumbers = 0;
+			int nbMatchingNumbers = 0;
 			int score = 0;
+			int* cardsCopied;
 		};
 
 	public:
@@ -26,6 +27,7 @@ namespace AdventOfCode23
 		void Resolve();
 
 	protected:
-		std::map<int, Card*> _cards;
+		std::map<int, std::pair<int, Card*>> _cards;
+		std::stack<Card*> _cardsStack;
 	};
 }

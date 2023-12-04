@@ -18,7 +18,7 @@ void AdventOfCode23::Day4::Resolve()
 		std::istringstream iss(line);
 		std::string number;
 		std::list<int>* validNumbers = new std::list<int>();
-
+		//std::pair<int, Card*>* cardInstance = new std::pair<int, Card*>(1, currentCard);
 		while (iss >> number)
 		{
 			std::cout << "is number a number?: " << number << std::endl;
@@ -44,20 +44,21 @@ void AdventOfCode23::Day4::Resolve()
 		}
 		currentCard->cardNumbers = cardNumbers;
 		
-		_cards[lineId] = currentCard;
+		_cards[lineId].second = currentCard;
+		_cardsStack.push(currentCard);
 		lineId++;
 	}
 
 	for (int i = 0; i < _cards.size(); i++)
 	{
 		int cardScore = 0;
-		Card* card = _cards[i];
+		Card* card = _cards[i].second;
 		for (std::list<int>::iterator itMyCard = card->cardNumbers->begin(); itMyCard != card->cardNumbers->end(); itMyCard++)
 		{
 			std::list<int>::iterator findIter = std::find(card->validNumbers->begin(), card->validNumbers->end(), *itMyCard);
 			if (findIter != card->validNumbers->end())
 			{
-				card->nbMatchinNumbers++;
+				card->nbMatchingNumbers++;
 				if (cardScore == 0)
 				{
 					cardScore = 1;
@@ -71,8 +72,29 @@ void AdventOfCode23::Day4::Resolve()
 		}
 		card->score = cardScore;
 		sumPoints += cardScore;
+
+		card->cardsCopied = new int[card->nbMatchingNumbers];
+		for (int i = 0; i < card->nbMatchingNumbers; i++)
+		{
+			int cardIdToCopy = (card->cardId + (i + 1));
+			card->cardsCopied[i] = cardIdToCopy;
+			_cards[cardIdToCopy].first += 1;
+		}
 		std::cout << "Total Score = " << sumPoints << std::endl;
 	}
 
+	for (int cardId = 0; cardId < _cards.size(); cardId++)
+	{
+		Card* card = _cards[cardId].second;
+		for (int i = 2; i < _cards[cardId].first; i++)
+		{
+			for (int j = 0; j < card->nbMatchingNumbers; j++)
+			{
+				int cardIdToDuplicate = card->cardsCopied[j];
+				_cards[j].first += 1;
+			}
+
+		}
+	}
 }
 

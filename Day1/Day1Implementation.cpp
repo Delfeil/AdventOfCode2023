@@ -4,24 +4,50 @@
 
 void DayImplementation::Resolve(char* fileName, int dayNumber, int stepNumber)
 {
-	if (dayNumber == 1)
+	switch (dayNumber)
 	{
+	case 1: {
 		Day1 d1(stepNumber);
 		d1.Resolve(fileName);
+		break;
+	}
+	case 2: {
+		Day2 d2(fileName, stepNumber);
+		d2.Resolve();
+		break;
+	}
+	case 3: {
+		Day3 d3(fileName, stepNumber);
+		d3.Resolve();
+		break;
+	}
+	case 4: {
+		Day4 d4(fileName, stepNumber);
+		d4.Resolve();
+		break;
+	}
+	case 5: {
+		break;
+	}
+	case 6: {
+		Day6 d6(fileName, stepNumber);
+		d6.Resolve();
+		break;
+	}
+	default:
+		break;
+	}
+
+	/*if (dayNumber == 1)
+	{
 	}
 	else if (dayNumber == 2)
 	{
-		Day2 d2(fileName, stepNumber);
-		d2.Resolve();
 	} 
 	else if (dayNumber == 3) {
-		Day3 d3(fileName, stepNumber);
-		d3.Resolve();
 	}
 	else if (dayNumber == 4) {
-		Day4 d4(fileName, stepNumber);
-		d4.Resolve();
-	}
+	}*/
 }
 
 int main(int argc, char* argv[])

@@ -4,6 +4,7 @@
 #include "Day3.h"
 #include "Day4.h"
 #include "Day6.h"
+#include "Day7.h"
 
 using namespace AdventOfCode23;
 

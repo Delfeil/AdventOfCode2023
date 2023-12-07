@@ -25,6 +25,8 @@
     <Text Include="d4input.txt" />
     <Text Include="d6test.txt" />
     <Text Include="d6input.txt" />
+    <Text Include="d7test.txt" />
+    <Text Include="d7input.txt" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Day1Implementation.h">

@@ -27,6 +27,8 @@ void DayImplementation::Resolve(char* fileName, int dayNumber, int stepNumber)
 		break;
 	}
 	case 5: {
+		Day5 d5(fileName, stepNumber);
+		d5.Resolve();
 		break;
 	}
 	case 6: {

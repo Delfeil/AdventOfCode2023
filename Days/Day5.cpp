@@ -1,7 +1,12 @@
 #include "pch.h"
 #include "Day5.h"
 
-void AdventOfCode23::Day5::Resolve()
+AdventOfCode23::Day5::Day5(char* fileName, long long stepNumber) : Day(fileName, stepNumber)
+{
+	Build();
+}
+
+void AdventOfCode23::Day5::Build()
 {
 	std::string line;
 	std::string patternNumbers("[0-9]+");
@@ -47,7 +52,10 @@ void AdventOfCode23::Day5::Resolve()
 		d5::Range* range = new d5::Range(std::stoll(inputputMin), std::stoll(rangevalue), std::stoll(outputMin));
 		_converters[converterId]->AddRange(range);
 	}
+}
 
+void AdventOfCode23::Day5::Resolve()
+{
 	long long nearestLocation = LLONG_MAX;
 	for (int seedId = 0; seedId < _seeds.size(); seedId++)
 	{

@@ -42,7 +42,9 @@ namespace AdventOfCode23
 	class Day5 : Day
 	{
 	public:
-		Day5(char* fileName, long long stepNumber) : Day(fileName, stepNumber) {};
+		//Day5(char* fileName, long long stepNumber) : Day(fileName, stepNumber) {};
+		Day5(char* fileName, long long stepNumber);
+		void Build();
 		void Resolve();
 		long long GetSeedLocation(long long seed);
 	protected:

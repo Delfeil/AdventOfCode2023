@@ -45,6 +45,10 @@ void DayImplementation::Resolve(char* fileName, int dayNumber, int stepNumber)
 		Day8 d8(fileName, stepNumber);
 		d8.Resolve();
 		break;
+	}case 9: {
+		Day9 d9(fileName, stepNumber);
+		d9.Resolve();
+		break;
 	}
 	default:
 		break;

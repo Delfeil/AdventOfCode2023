@@ -31,6 +31,8 @@
     <Text Include="d8input.txt" />
     <Text Include="d5test.txt" />
     <Text Include="d5input.txt" />
+    <Text Include="d9test.txt" />
+    <Text Include="d9input.txt" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Day1Implementation.h">

@@ -143,6 +143,8 @@
     <Text Include="d7test.txt" />
     <Text Include="d8input.txt" />
     <Text Include="d8test.txt" />
+    <Text Include="d9input.txt" />
+    <Text Include="d9test.txt" />
     <Text Include="input.txt" />
     <Text Include="inputD2.txt" />
     <Text Include="test.txt" />

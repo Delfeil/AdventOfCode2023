@@ -130,6 +130,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <Text Include="d10input.txt" />
+    <Text Include="d10test.txt" />
+    <Text Include="d10test2.txt" />
     <Text Include="d2exemple.txt" />
     <Text Include="d3input.txt" />
     <Text Include="d3Test.txt" />

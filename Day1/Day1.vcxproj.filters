@@ -15,27 +15,71 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="input.txt" />
-    <Text Include="test.txt" />
-    <Text Include="inputD2.txt" />
-    <Text Include="d2exemple.txt" />
-    <Text Include="d3Test.txt" />
-    <Text Include="d3input.txt" />
-    <Text Include="d4test.txt" />
-    <Text Include="d4input.txt" />
-    <Text Include="d6test.txt" />
-    <Text Include="d6input.txt" />
-    <Text Include="d7test.txt" />
-    <Text Include="d7input.txt" />
-    <Text Include="d8test.txt" />
-    <Text Include="d8input.txt" />
-    <Text Include="d5test.txt" />
-    <Text Include="d5input.txt" />
-    <Text Include="d9test.txt" />
-    <Text Include="d9input.txt" />
-    <Text Include="d10test.txt" />
-    <Text Include="d10test2.txt" />
-    <Text Include="d10input.txt" />
+    <Text Include="d2exemple.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="d3input.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="d3Test.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="d4input.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="d4test.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="d5input.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="d5test.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="d6input.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="d6test.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="d7input.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="d7test.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="d8input.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="d8test.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="d9input.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="d9test.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="d10input.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="d10test.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="d10test2.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="input.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="inputD2.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="test.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="d11test.txt" />
+    <Text Include="d11input.txt" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Day1Implementation.h">
